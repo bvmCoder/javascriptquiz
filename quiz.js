@@ -6,7 +6,7 @@
 // let choicee3 = document.querySelector('#choice3');
 // let startButton = document.querySelector('#startbutton');
 // let i = 0;
-
+const dataElement = document.getElementById('question');
 //api fetch questions function
 var answerArry = [];
  function quizQuestion(){
@@ -17,7 +17,7 @@ var answerArry = [];
      .then(data => {
          console.log(data);
          if(data){
-             document.getElementById('question').innerHTML = data.results[0].question;
+             dataElement.innertext = data.results[0].question;
              
          }
      })
